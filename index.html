@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sara Posada · Portafolio</title>
+<meta name="description" content="Portafolio de Sara Posada: proyectos, experiencia y contacto.">
+<meta property="og:title" content="Sara Posada · Portafolio">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F0F7; --ink:#1A1830; --muted:#5E5B78; --line:#D6D2E4;
+  --accent:#3342E8; --accent-ink:#fff; --soft:#F3C6D8;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Figtree","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47}
+}
+:root[data-theme="dark"]{--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.logo{font:800 1.25rem var(--display);text-decoration:none}
+nav{display:flex;gap:1.5rem;align-items:center;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);width:2.25rem;height:2.25rem;border-radius:50%;cursor:pointer;font-size:1rem}
+
+.hero{padding:clamp(3rem,10vw,7rem) 0 clamp(3rem,8vw,5rem)}
+.hero h1{font:800 clamp(3.2rem,12vw,9rem)/.92 var(--display);letter-spacing:-.04em}
+.hero h1 span{display:block;color:var(--accent)}
+.hero p{max-width:34rem;margin-top:2rem;font-size:1.25rem;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+
+section{padding:clamp(3rem,7vw,5rem) 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--display);letter-spacing:-.02em;margin-bottom:2.5rem}
+
+.about{display:grid;grid-template-columns:1fr 1.6fr;gap:2rem}
+.about .photo{aspect-ratio:4/5;background:var(--soft);border-radius:1.5rem 1.5rem 1.5rem 0;display:grid;place-items:center;color:var(--muted);font-size:.9rem;overflow:hidden}
+.about .photo img{width:100%;height:100%;object-fit:cover}
+.about p+p{margin-top:1rem}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;list-style:none;padding:0}
+.skills li{padding:.35rem .9rem;border:1px solid var(--line);border-radius:99px;font-size:.95rem}
+
+.project{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;align-items:center;padding:2rem 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+.project:nth-child(even) .thumb{order:2}
+.thumb{aspect-ratio:16/10;border-radius:1rem;background:var(--soft);display:grid;place-items:center;color:var(--muted);font-size:.9rem;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.project h3{font:800 1.75rem/1.15 var(--display);letter-spacing:-.01em}
+.project .tags{color:var(--accent);font-weight:600;font-size:.95rem;margin:.4rem 0 .8rem}
+.project p{color:var(--muted)}
+.project a.more{display:inline-block;margin-top:1rem;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+
+.timeline{list-style:none;padding:0}
+.timeline li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.timeline .date{color:var(--muted);font-weight:500}
+.timeline strong{font-family:var(--display);font-size:1.15rem}
+
+.contact p{max-width:34rem;color:var(--muted);margin-bottom:1.5rem}
+.contact .mail{font:800 clamp(1.5rem,5vw,3rem)/1.1 var(--display);word-break:break-all;color:var(--accent);text-underline-offset:6px}
+.social{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap;font-weight:600}
+footer{padding:2rem 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media (max-width:720px){
+  .about,.project{grid-template-columns:1fr}
+  .project:nth-child(even) .thumb{order:0}
+  .about .photo{max-width:16rem}
+  .timeline li{grid-template-columns:1fr;gap:.2rem}
+  nav a.hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.btn{transition:transform .15s}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#inicio">Sara Posada</a>
+    <nav aria-label="Principal">
+      <a class="hide-sm" href="#sobre-mi">Sobre mí</a>
+      <a class="hide-sm" href="#proyectos">Proyectos</a>
+      <a class="hide-sm" href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+      <button id="theme" type="button" aria-label="Cambiar tema claro u oscuro">◐</button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <!-- EDITA: tu profesión y una frase corta -->
+      <h1>Hola, soy <span>Sara Posada</span></h1>
+      <p>[Tu profesión o especialidad]. Creo [qué haces] para [a quién ayudas].</p>
+      <div class="btns">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn" href="#contacto">Escríbeme</a>
+      </div>
+    </div>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="about">
+        <!-- EDITA: reemplaza el div por <img src="foto.jpg" alt="Sara Posada"> -->
+        <div class="photo">Tu foto aquí</div>
+        <div>
+          <p>[Cuenta quién eres, tu formación y qué te apasiona.]</p>
+          <p>[Describe tu forma de trabajar y qué buscas en nuevos proyectos.]</p>
+          <ul class="skills" aria-label="Habilidades">
+            <li>Habilidad 1</li><li>Habilidad 2</li><li>Habilidad 3</li><li>Habilidad 4</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <!-- Copia y pega este bloque <article> por cada proyecto -->
+      <article class="project">
+        <div class="thumb">Imagen del proyecto</div>
+        <div>
+          <h3>Nombre del proyecto 1</h3>
+          <div class="tags">Categoría · Año</div>
+          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
+          <a class="more" href="#">Ver proyecto</a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="thumb">Imagen del proyecto</div>
+        <div>
+          <h3>Nombre del proyecto 2</h3>
+          <div class="tags">Categoría · Año</div>
+          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
+          <a class="more" href="#">Ver proyecto</a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="thumb">Imagen del proyecto</div>
+        <div>
+          <h3>Nombre del proyecto 3</h3>
+          <div class="tags">Categoría · Año</div>
+          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
+          <a class="more" href="#">Ver proyecto</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiencia y formación</h2>
+      <ul class="timeline">
+        <li><span class="date">2024 – Actualidad</span><div><strong>Cargo o estudio</strong><br>Empresa o institución. [Una línea de logros.]</div></li>
+        <li><span class="date">2022 – 2024</span><div><strong>Cargo o estudio</strong><br>Empresa o institución. [Una línea de logros.]</div></li>
+        <li><span class="date">2018 – 2022</span><div><strong>Formación académica</strong><br>Universidad. [Título obtenido.]</div></li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Trabajemos juntos</h2>
+      <p>¿Tienes un proyecto o una oportunidad? Escríbeme y te respondo pronto.</p>
+      <a class="mail" href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
+      <div class="social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Sara Posada. Todos los derechos reservados.</footer>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, btn = document.getElementById('theme');
+  try { var s = localStorage.getItem('theme'); if (s) root.setAttribute('data-theme', s); } catch(e){}
+  btn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') === 'dark' ||
+      (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
