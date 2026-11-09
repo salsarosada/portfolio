@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sara Posada · Portafolio</title>
-<meta name="description" content="Portafolio de Sara Posada: proyectos, experiencia y contacto.">
+<meta name="description" content="Portafolio de Sara Posada: comunicadora de entretenimiento digital con experiencia en desarrollo web y de videojuegos.">
 <meta property="og:title" content="Sara Posada · Portafolio">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
@@ -14,14 +14,14 @@
 <style>
 :root{
   --bg:#F2F0F7; --ink:#1A1830; --muted:#5E5B78; --line:#D6D2E4;
-  --accent:#3342E8; --accent-ink:#fff; --soft:#F3C6D8;
+  --accent:#3342E8; --accent-ink:#fff; --soft:#F3C6D8; --pink:#E8799F; --card:#FAF9FD;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Figtree","Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47}
+  :root:not([data-theme="light"]){--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47;--pink:#E8799F;--card:#1D1A38}
 }
-:root[data-theme="dark"]{--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47}
+:root[data-theme="dark"]{--bg:#15132A;--ink:#F1EFFA;--muted:#A9A5C6;--line:#2F2B52;--accent:#8E99FF;--accent-ink:#15132A;--soft:#5A2E47;--pink:#E8799F;--card:#1D1A38}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
@@ -29,46 +29,42 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:68rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
 
-header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1rem}
 .logo{font:800 1.25rem var(--display);text-decoration:none}
 nav{display:flex;gap:1.5rem;align-items:center;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
-#theme{background:none;border:1px solid var(--line);color:var(--ink);width:2.25rem;height:2.25rem;border-radius:50%;cursor:pointer;font-size:1rem}
+#theme,#lang{background:none;border:1px solid var(--line);color:var(--ink);width:2.25rem;height:2.25rem;border-radius:50%;cursor:pointer;font-size:1rem}
+#lang{width:auto;padding:0 .8rem;border-radius:99px;font:600 .85rem var(--body)}
 
 .hero{padding:clamp(3rem,10vw,7rem) 0 clamp(3rem,8vw,5rem)}
 .hero h1{font:800 clamp(3.2rem,12vw,9rem)/.92 var(--display);letter-spacing:-.04em}
 .hero h1 span{display:block;color:var(--accent)}
-.hero p{max-width:34rem;margin-top:2rem;font-size:1.25rem;color:var(--muted)}
+.hero p{max-width:36rem;margin-top:2rem;font-size:1.25rem;color:var(--muted)}
 .btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
-.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn:hover{transform:translateY(-2px)}
 
 section{padding:clamp(3rem,7vw,5rem) 0;border-top:1px solid var(--line)}
 h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--display);letter-spacing:-.02em;margin-bottom:2.5rem}
+h3.group{font:800 1.1rem var(--display);margin:0 0 .8rem}
 
-.about{display:grid;grid-template-columns:1fr 1.6fr;gap:2rem}
+.about{display:grid;grid-template-columns:1fr 1.6fr;gap:2.5rem;align-items:start}
 .about .photo{aspect-ratio:4/5;background:var(--soft);border-radius:1.5rem 1.5rem 1.5rem 0;display:grid;place-items:center;color:var(--muted);font-size:.9rem;overflow:hidden}
 .about .photo img{width:100%;height:100%;object-fit:cover}
-.about p+p{margin-top:1rem}
-.skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;list-style:none;padding:0}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin-bottom:1.75rem}
 .skills li{padding:.35rem .9rem;border:1px solid var(--line);border-radius:99px;font-size:.95rem}
 
-.project{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem;align-items:center;padding:2rem 0;border-bottom:1px solid var(--line)}
-.project:last-child{border-bottom:0}
-.project:nth-child(even) .thumb{order:2}
-.thumb{aspect-ratio:16/10;border-radius:1rem;background:var(--soft);display:grid;place-items:center;color:var(--muted);font-size:.9rem;overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover}
-.project h3{font:800 1.75rem/1.15 var(--display);letter-spacing:-.01em}
-.project .tags{color:var(--accent);font-weight:600;font-size:.95rem;margin:.4rem 0 .8rem}
-.project p{color:var(--muted)}
-.project a.more{display:inline-block;margin-top:1rem;font-weight:600;text-decoration:underline;text-underline-offset:4px}
-
-.timeline{list-style:none;padding:0}
-.timeline li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
-.timeline .date{color:var(--muted);font-weight:500}
-.timeline strong{font-family:var(--display);font-size:1.15rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--pink);border-radius:1rem;padding:1.5rem;display:flex;flex-direction:column}
+.games .card{border-top-color:var(--accent)}
+.card h3{font:800 1.5rem/1.15 var(--display);letter-spacing:-.01em}
+.card .tags{color:var(--accent);font-weight:600;font-size:.92rem;margin:.4rem 0 .8rem}
+.card p{color:var(--muted);flex:1}
+.links{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.25rem}
+.links a{font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.links a:hover{color:var(--accent)}
 
 .contact p{max-width:34rem;color:var(--muted);margin-bottom:1.5rem}
 .contact .mail{font:800 clamp(1.5rem,5vw,3rem)/1.1 var(--display);word-break:break-all;color:var(--accent);text-underline-offset:6px}
@@ -76,122 +72,171 @@ h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--display);letter-spacing:-.02em;ma
 footer{padding:2rem 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 
 @media (max-width:720px){
-  .about,.project{grid-template-columns:1fr}
-  .project:nth-child(even) .thumb{order:0}
+  .about{grid-template-columns:1fr}
   .about .photo{max-width:16rem}
-  .timeline li{grid-template-columns:1fr;gap:.2rem}
   nav a.hide-sm{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-.btn{transition:transform .15s}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <a class="logo" href="#inicio">Sara Posada</a>
-    <nav aria-label="Principal">
-      <a class="hide-sm" href="#sobre-mi">Sobre mí</a>
-      <a class="hide-sm" href="#proyectos">Proyectos</a>
-      <a class="hide-sm" href="#experiencia">Experiencia</a>
-      <a href="#contacto">Contacto</a>
-      <button id="theme" type="button" aria-label="Cambiar tema claro u oscuro">◐</button>
+    <nav aria-label="Principal" data-en-label="Main">
+      <a class="hide-sm" href="#sobre-mi" data-en="About">Sobre mí</a>
+      <a class="hide-sm" href="#paginas-web" data-en="Websites">Páginas web</a>
+      <a class="hide-sm" href="#videojuegos" data-en="Video games">Videojuegos</a>
+      <a href="#contacto" data-en="Contact">Contacto</a>
+      <button id="lang" type="button" aria-label="Cambiar idioma" data-en-label="Change language">EN</button>
+      <button id="theme" type="button" aria-label="Cambiar tema claro u oscuro" data-en-label="Switch light or dark theme">◐</button>
     </nav>
   </header>
 
   <main id="inicio">
     <div class="hero">
-      <!-- EDITA: tu profesión y una frase corta -->
-      <h1>Hola, soy <span>Sara Posada</span></h1>
-      <p>[Tu profesión o especialidad]. Creo [qué haces] para [a quién ayudas].</p>
+      <h1 data-en="Hi, I'm <span>Sara Posada</span>">Hola, soy <span>Sara Posada</span></h1>
+      <p data-en="Digital entertainment communicator with experience in web development and video game development.">Comunicadora de entretenimiento digital con experiencia en desarrollo web y desarrollo de videojuegos.</p>
       <div class="btns">
-        <a class="btn primary" href="#proyectos">Ver proyectos</a>
-        <a class="btn" href="#contacto">Escríbeme</a>
+        <a class="btn primary" href="#videojuegos" data-en="View video games">Ver videojuegos</a>
+        <a class="btn" href="#paginas-web" data-en="View websites">Ver páginas web</a>
       </div>
     </div>
 
     <section id="sobre-mi">
-      <h2>Sobre mí</h2>
+      <h2 data-en="About me">Sobre mí</h2>
       <div class="about">
-        <!-- EDITA: reemplaza el div por <img src="foto.jpg" alt="Sara Posada"> -->
-        <div class="photo">Tu foto aquí</div>
+        <!-- Para tu foto: reemplaza el div por <img src="foto.jpg" alt="Sara Posada"> -->
+        <div class="photo" data-en="Your photo here">Tu foto aquí</div>
         <div>
-          <p>[Cuenta quién eres, tu formación y qué te apasiona.]</p>
-          <p>[Describe tu forma de trabajar y qué buscas en nuevos proyectos.]</p>
-          <ul class="skills" aria-label="Habilidades">
-            <li>Habilidad 1</li><li>Habilidad 2</li><li>Habilidad 3</li><li>Habilidad 4</li>
+          <h3 class="group" data-en="Web development and tools">Desarrollo web y herramientas</h3>
+          <ul class="skills">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>.NET</li><li>C#</li><li>Python</li><li>Java</li><li>MySQL</li><li>WordPress</li><li>Visual Studio</li><li>GitHub</li><li>Power BI</li>
+          </ul>
+          <h3 class="group" data-en="Video game development">Desarrollo de videojuegos</h3>
+          <ul class="skills">
+            <li>Unity</li><li>Unreal Engine 5</li><li>C#</li><li data-en="Programming patterns">Patrones de programación</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <!-- Copia y pega este bloque <article> por cada proyecto -->
-      <article class="project">
-        <div class="thumb">Imagen del proyecto</div>
-        <div>
-          <h3>Nombre del proyecto 1</h3>
-          <div class="tags">Categoría · Año</div>
-          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
-          <a class="more" href="#">Ver proyecto</a>
-        </div>
-      </article>
-      <article class="project">
-        <div class="thumb">Imagen del proyecto</div>
-        <div>
-          <h3>Nombre del proyecto 2</h3>
-          <div class="tags">Categoría · Año</div>
-          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
-          <a class="more" href="#">Ver proyecto</a>
-        </div>
-      </article>
-      <article class="project">
-        <div class="thumb">Imagen del proyecto</div>
-        <div>
-          <h3>Nombre del proyecto 3</h3>
-          <div class="tags">Categoría · Año</div>
-          <p>[Qué problema resolvía, cuál fue tu rol y el resultado.]</p>
-          <a class="more" href="#">Ver proyecto</a>
-        </div>
-      </article>
+    <section id="paginas-web">
+      <h2 data-en="Websites">Páginas web</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>La Polilla</h3>
+          <div class="tags">.NET · HTML · CSS · C# · JavaScript</div>
+          <p data-en="Web development practice in .NET carried out with HTML, CSS, C# and JavaScript of a responsive website for the artistic corporation La Polilla.">Práctica de desarrollo web en .NET realizada con HTML, CSS, C# y JavaScript de un sitio web responsive para la corporación artística La Polilla.</p>
+          <div class="links"><a href="https://github.com/salsarosada/CafeGatsby" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a></div>
+        </article>
+        <article class="card">
+          <h3>Café Gatsby</h3>
+          <div class="tags">.NET · HTML · CSS · C# · JavaScript</div>
+          <p data-en="Web development practice in .NET carried out with HTML, CSS, C# and JavaScript of a responsive website for Café Gatsby.">Práctica de desarrollo web en .NET realizada con HTML, CSS, C# y JavaScript de un sitio web responsive para Café Gatsby.</p>
+          <div class="links"><a href="https://github.com/salsarosada/CafeGatsby" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a></div>
+        </article>
+        <article class="card">
+          <h3>Decor Signature</h3>
+          <div class="tags">WordPress</div>
+          <p data-en="Web design practice carried out with WordPress of a responsive website for Decor Signature.">Práctica de diseño web realizada con WordPress de un sitio web responsive para Decor Signature.</p>
+          <div class="links"><a href="https://decorsignature.com/" target="_blank" rel="noopener" data-en="See website">Ver sitio web</a></div>
+        </article>
+      </div>
     </section>
 
-    <section id="experiencia">
-      <h2>Experiencia y formación</h2>
-      <ul class="timeline">
-        <li><span class="date">2024 – Actualidad</span><div><strong>Cargo o estudio</strong><br>Empresa o institución. [Una línea de logros.]</div></li>
-        <li><span class="date">2022 – 2024</span><div><strong>Cargo o estudio</strong><br>Empresa o institución. [Una línea de logros.]</div></li>
-        <li><span class="date">2018 – 2022</span><div><strong>Formación académica</strong><br>Universidad. [Título obtenido.]</div></li>
-      </ul>
+    <section id="videojuegos" class="games">
+      <h2 data-en="Video games">Videojuegos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Pablito’s Life</h3>
+          <div class="tags">Unity 6 · Factory · Builder · Singleton · Memento</div>
+          <p data-en="Life simulation video game development practice made with Unity 6 using programming patterns such as factory, builder, singleton and memento.">Práctica de desarrollo de un videojuego de simulación de vida hecha con Unity 6, usando patrones de programación como factory, builder, singleton y memento.</p>
+          <div class="links"><a href="https://github.com/salsarosada/Pablitos-Life" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a></div>
+        </article>
+        <article class="card">
+          <h3>A Bubble’s Tale</h3>
+          <div class="tags">Unity · Global Game Jam 2025</div>
+          <p data-en="Platformer game development practice carried out with Unity at Global Game Jam 2025 using jumping mechanics, health bars, enemy death, checkpoints, and item collection.">Práctica de desarrollo de un juego de plataformas realizada con Unity en la Global Game Jam 2025, con mecánicas de salto, barras de vida, muerte de enemigos, puntos de control y recolección de objetos.</p>
+          <div class="links">
+            <a href="https://github.com/salsarosada/GGJ-2025" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a>
+            <a href="https://salsarosada.itch.io/a-bubble-tale" target="_blank" rel="noopener" data-en="Play it on itch.io">Jugar en itch.io</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Pablito’s Closet</h3>
+          <div class="tags">Unity · Abstract Factory</div>
+          <p data-en="Practice developing a dress-up video game with Unity using programming patterns such as Abstract Factory.">Práctica de desarrollo de un videojuego de vestir personajes con Unity, usando patrones de programación como Abstract Factory.</p>
+          <div class="links"><a href="https://github.com/salsarosada/PablitosCloset" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a></div>
+        </article>
+        <article class="card">
+          <h3>Pablito’s Garden</h3>
+          <div class="tags">Unity · Builder</div>
+          <p data-en="Video game development practice made with Unity using programming patterns like Builder.">Práctica de desarrollo de videojuego hecha con Unity, usando patrones de programación como Builder.</p>
+        </article>
+        <article class="card">
+          <h3>Pablito’s Firing Range</h3>
+          <div class="tags">Unity · Multiplayer · Object Pooling</div>
+          <p data-en="Multiplayer video game development practice made with Unity using the Object Pooling programming pattern.">Práctica de desarrollo de un videojuego multijugador hecha con Unity, usando el patrón de programación Object Pooling.</p>
+          <div class="links"><a href="https://github.com/salsarosada/PablitosFiringRange" target="_blank" rel="noopener" data-en="View repository">Ver repositorio</a></div>
+        </article>
+      </div>
     </section>
 
     <section id="contacto" class="contact">
-      <h2>Trabajemos juntos</h2>
-      <p>¿Tienes un proyecto o una oportunidad? Escríbeme y te respondo pronto.</p>
+      <h2 data-en="Let's work together">Trabajemos juntos</h2>
+      <p data-en="Have a project or an opportunity? Write to me and I'll reply soon.">¿Tienes un proyecto o una oportunidad? Escríbeme y te respondo pronto.</p>
+      <!-- Cambia este correo por el tuyo -->
       <a class="mail" href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
       <div class="social">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#">Behance</a>
+        <a href="https://github.com/salsarosada" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://salsarosada.itch.io/" target="_blank" rel="noopener">itch.io</a>
       </div>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> Sara Posada. Todos los derechos reservados.</footer>
+  <footer>© <span id="year"></span> Sara Posada. <span data-en="All rights reserved.">Todos los derechos reservados.</span></footer>
 </div>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
 (function(){
-  var root = document.documentElement, btn = document.getElementById('theme');
+  var root = document.documentElement, themeBtn = document.getElementById('theme');
   try { var s = localStorage.getItem('theme'); if (s) root.setAttribute('data-theme', s); } catch(e){}
-  btn.addEventListener('click', function(){
+  themeBtn.addEventListener('click', function(){
     var dark = root.getAttribute('data-theme') === 'dark' ||
       (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
     var next = dark ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     try { localStorage.setItem('theme', next); } catch(e){}
+  });
+
+  var btn = document.getElementById('lang');
+  var titles = {es:'Sara Posada · Portafolio', en:'Sara Posada · Portfolio'};
+  document.querySelectorAll('[data-en]').forEach(function(el){ el.setAttribute('data-es', el.innerHTML); });
+  document.querySelectorAll('[data-en-label]').forEach(function(el){ el.setAttribute('data-es-label', el.getAttribute('aria-label')); });
+  function apply(lang){
+    root.setAttribute('lang', lang);
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      el.innerHTML = el.getAttribute(lang === 'en' ? 'data-en' : 'data-es');
+    });
+    document.querySelectorAll('[data-en-label]').forEach(function(el){
+      el.setAttribute('aria-label', el.getAttribute(lang === 'en' ? 'data-en-label' : 'data-es-label'));
+    });
+    document.title = titles[lang];
+    document.getElementById('year').textContent = new Date().getFullYear();
+    btn.textContent = lang === 'en' ? 'ES' : 'EN';
+  }
+  var lang = 'es';
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved) lang = saved;
+    else if ((navigator.language || '').toLowerCase().indexOf('es') !== 0) lang = 'en';
+  } catch(e){}
+  apply(lang);
+  btn.addEventListener('click', function(){
+    lang = lang === 'es' ? 'en' : 'es';
+    apply(lang);
+    try { localStorage.setItem('lang', lang); } catch(e){}
   });
 })();
 </script>
